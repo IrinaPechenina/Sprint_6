@@ -1,5 +1,7 @@
 
 import allure
+
+import data
 import helpers
 from locators.order_page_locators import OrderPageLocators
 from pages.base_page import BasePage
@@ -87,6 +89,7 @@ class OrderPage(BasePage):
         self.click_on_element(OrderPageLocators.ORDER_BUTTON_MIDDLE)
         self.click_on_element(OrderPageLocators.CONFIRM_BUTTON)
 
-    @allure.step('Получаем текст c кнопки Посмотреть статус')
-    def get_text_from_order_status_button(self):
-        return self.get_text_from_element(OrderPageLocators.ORDER_STATUS_BUTTON)
+    @allure.step('Проверяем, что заказ создан успешно -всплывающее окно содержит кнопку с текстом "Посмотреть статус"')
+    def confirmation_order_is_done(self):
+        result = self.get_text_from_element(OrderPageLocators.ORDER_STATUS_BUTTON)
+        return result == data.expected_result_order_is_done

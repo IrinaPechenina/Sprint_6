@@ -22,3 +22,7 @@ SCOOTER_COLORS = ['black', 'grey']
 NAMES = ['Ирина', 'Наташа', 'Марина']
 SURNAMES = ['Печенина', 'Жарова', 'Белова']
 ADDRESSES = ['Сеченовский пер., д.7', 'Короленко, д.3', 'Якиманский пер., д.6']
+
+expected_result_yandex_logo = 'Найти'
+expected_result_scooter_logo = 'И здесь куки! В общем, мы их используем.'
+expected_result_order_is_done = 'Посмотреть статус'

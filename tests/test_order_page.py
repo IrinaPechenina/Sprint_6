@@ -19,5 +19,4 @@ class TestOrderPage:
         order_page.click_on_further_button()
         order_page.set_order_info(date, comment)
         order_page.click_on_order_approval_buttons()
-        result = order_page.get_text_from_order_status_button()
-        assert result == 'Посмотреть статус'
+        assert order_page.confirmation_order_is_done()
